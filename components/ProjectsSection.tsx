@@ -1,34 +1,35 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
-import SlideUp from "./SlideUp"
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import SlideUp from "./SlideUp";
+import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
 const projects = [
   {
-    name: "Thankful Thoughts",
+    name: "Real-time Chat application",
     description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+      "Developed a real-time chat application using Next.js for the frontend and Node.js with TypeScript for the backend. Implemented features such as instant messaging and user authentication, leveraging WebSocket technology forseamless real-time data transfer. Deployed the application on AWS and utilized Nginx as a reverse proxy to enhance performance and scalability, significantly improving the user communication experience.",
+    image: "/chatt.png",
+    github: "https://github.com/prathameshpatil5181/Chat_application",
+    link: "",
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    name: "Coding website",
+    description:
+      "Developed a competitive coding platform using React for the frontend, Node.js for the backend, and TypeScript for type safety and maintainability. Utilized Utilized Docker to run user-submitted code in isolated containers, ensuring security and scalability. Implemented multi-language support, allowing users to code in various programming languages",
+    image: "/Nunito.png",
+    github: "https://github.com/prathameshpatil5181/CodeQuest.git",
+    link: "",
   },
   {
-    name: "Kator Family Photos",
+    name: "Gesture controlled Robot",
     description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
+      "Developed a Gesture-Controlled Omnidirectional Robot using Open CV for real-time gesture recognition.Integrated motion control algorithms for precise movements based on recognized gestures and seamlessly connected software with hardware via Bluetooth communication, showcasing advanced human-robot interaction.",
+    image: "/robot.png",
+    github: "https://github.com/prathameshpatil5181/Gesture-Controlled-Robot",
+    link: "https://www.youtube.com/shorts/i4WMXv_TiZg",
   },
-]
+];
 
 const ProjectsSection = () => {
   return (
@@ -41,9 +42,9 @@ const ProjectsSection = () => {
       <div className="flex flex-col space-y-28">
         {projects.map((project, idx) => {
           return (
-            <div key={idx}>
+            <div key={idx} >
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
+                <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12 items-center">
                   <div className=" md:w-1/2">
                     <Link href={project.link}>
                       <Image
@@ -78,12 +79,11 @@ const ProjectsSection = () => {
                 </div>
               </SlideUp>
             </div>
-          )
+          );
         })}
-        
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProjectsSection
+export default ProjectsSection;

@@ -1,7 +1,7 @@
 "use client" // this is a client component
 import React from "react"
 import { useState } from "react"
-import { Link } from "react-scroll/modules"
+import { Link } from "react-scroll"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
@@ -38,9 +38,9 @@ export default function Navbar() {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link to="home">
-              <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">Hosna Qasmei</h2>
-              </div>
+              {/* <div className="container flex items-center space-x-2">
+                <h2 className="text-2xl font-bold">Prathamesh Patil</h2>
+              </div> */}
             </Link>
             <div className="md:hidden">
               <button
